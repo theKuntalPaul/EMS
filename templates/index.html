@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Examination Management System</title>
+    <link rel="stylesheet" href="{% static 'index.css' %}" />
+  </head>
+
+  <body>
+    <div class="head">
+      <center><h1>EXAMINATION MANAGEMENT SYSTEM</h1></center>
+    </div>
+
+    <div class="left_col">
+      <h3>Student</h3>
+
+      <form action="" method="get">
+        <br />
+        <center>
+          <strong
+            ><a
+              href="{% url 'studentsignup' %}"
+              class="update-btn"
+              type="submit"
+              >Signup</a
+            ></strong
+          >
+        </center>
+      </form>
+    </div>
+    <!--end of left col-->
+
+    <div class="right_col">
+      <h3>Faculty</h3>
+
+      <form action="" method="get">
+        <br />
+        <center>
+          <a href="{% url 'facultysignup' %}" class="update-btn" type="submit"
+            >Signup</a
+          >
+        </center>
+      </form>
+    </div>
+  </body>
+</html>

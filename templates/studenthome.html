@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Student Homepage</title>
+    <link rel="stylesheet" href="{% static 'student.css' %}">
+  </head>
+
+  <body>
+  {% if user.is_authenticated %}
+
+    <div class="main-div">
+
+      <div class="welcome">
+
+        <h2>WELCOME Student,</h2><br>
+        <h2>{{user.first_name}} {{user.last_name}}</h2>
+
+      </div>
+
+      <div class="update">
+
+        <h1 align="center">STUDENT HOME PAGE</h1>
+        <h3 align="center" class="c">MARKSHEET</h3>
+
+        <table width="100%" class="tg">
+          <thead>
+
+            <tr>
+              <th class="tg-ix6g"><span style="font-weight:bold">Semester</span></th>
+              <th class="tg-ix6g"><span style="font-weight:bold">Sub 1</span></th>
+              <th class="tg-ix6g"><span style="font-weight:bold">Sub 2</span></th>
+              <th class="tg-ix6g"><span style="font-weight:bold">Sub 3</span></th>
+              <th class="tg-ix6g"><span style="font-weight:bold">Sub 4</span></th>
+            </tr>
+
+          </thead>
+          <tbody>
+
+            <tr>{% for m in marks %}
+              <td class="tg-ix6g"><span style="font-weight:bold">{{m.sem}}</span></td>
+              <td class="tg-ix6g">{{m.subject_1}}</td>
+              <td class="tg-ix6g">{{m.subject_2}}</td>
+              <td class="tg-ix6g">{{m.subject_3}}</td>
+              <td class="tg-ix6g">{{m.subject_4}}</td>
+            </tr> {% endfor %}
+
+          </tbody>
+        </table>
+        
+      </div>
+
+      <p><center><h2>Please Logout <a href="{% url 'student' %}" class="update-btn" type="submit">Here</a></h2></center></p>
+ 
+    </div>
+
+  {% else %}
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <p><center><h1>You are not logged in</h1></center></p>
+    <p><center><h2>Please Login <a href="{% url 'student' %}">Here</a></h2></center></p>
+    
+  {% endif %}
+  </body>
+  
+</html>  
+
+
+

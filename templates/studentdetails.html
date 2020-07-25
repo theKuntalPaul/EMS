@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<h1>STUDENT's MARKSHEET UPDATE</h1>
+<h2>{{user.first_name}} {{user.last_name}}, update your student's marksheet:</h2>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <fieldset class="studentinfo">
+        <legend>UPDATE MARKSHEET:</legend>
+        <div>{{ form.as_p }}</div>
+      </fieldset>
+      </br>
+      <div class="but">
+        <input class="update-btn" type="submit" value="Update" />
+        <input class="update-btn" type="reset" value="Reset" />
+      </div></br>
+    </form>
+{% endblock content %}
+
+
+

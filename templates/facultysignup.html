@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Faculty's Signup Page</h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <fieldset class="studentinfo">
+        <legend>Personal info:</legend>
+        <div>{{ form.as_p }}</div>
+      </fieldset>
+      </br>
+      <div class="but">
+        <input class="update-btn" type="submit" value="Signup" />
+        <input class="update-btn" type="reset" value="Reset" />
+      </div></br>
+      <div class="link">
+        <p><h4>Already a Registered Faculty? <a href="{% url 'faculty' %}" class="update-btn" type="submit">Login</a></h4></p>
+      </div>
+    </form>
+{% endblock content %} 
+
+ 

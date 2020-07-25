@@ -1,0 +1,84 @@
+.head h1 {
+  background-color: #ffba00;
+  font-size: 35px; /*weight style size type*/
+  font-weight: bold;
+  color: #444851;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+.left_col {
+  float: left;
+  background-color: #e3e6ee;
+  width: 50%;
+  height: 511px;
+  text-align: center;
+  color: black;
+}
+.right_col {
+  float: left;
+  background-color: #e3e6ee;
+  width: 50%;
+  height: 511px;
+  text-align: center;
+  color: black;
+}
+.left_col h3 {
+  background-color: #444851;
+  font-weight: bold;
+  color: #ffba00;
+  font-weight: bold;
+  font-size: xx-large;
+  margin-right: 15px;
+  padding: 25px 25px;
+}
+
+.right_col h3 {
+  background-color: #444851;
+  color: #ffba00;
+  font-weight: bold;
+  font-size: xx-large;
+  margin-left: 15px;
+  padding: 25px 25px;
+}
+.left_col p {
+  text-align: center;
+}
+.right_col p {
+  text-align: center;
+}
+
+body {
+  background-color: #535760;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+body h3 {
+  background-color: #535760;
+  font-weight: bold;
+  color: #ffba00;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.left_col label {
+  width: 75px;
+}
+.right_col label {
+  width: 75px;
+}
+.update-btn {
+  background-color: #ffba00;
+  color: #444851;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 10px 0 0;
+  padding: 0.4rem;
+  right: 2px;
+  border-radius: 5px;
+  width: 15%;
+  text-decoration: none;
+}

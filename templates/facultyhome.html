@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Faculty Homepage</title>
+    <link rel="stylesheet" href="{% static 'Faculty-pg.css' %}">
+  </head>
+
+  <body>
+    
+    {% if user.is_authenticated %}
+     
+      <div class=" main-div">
+
+        <div class="welcome">
+          <h2 class="text1">WELCOME Faculty,</h2>
+          <p class="text2"><h2>{{user.first_name}} {{user.last_name}}</h2></p>
+        </div>
+
+        <div class="update">
+          <h1>STUDENT DETAILS</h1>
+          <h4>
+          <center>
+          <table class="table1">
+            <tr>
+              <th>Name</th>
+              <th>Department</th>
+              <th>Email id</th>
+            </tr>{% block content %}{% endblock content %} 
+            {% for arti in object_list %}
+            <tr>
+              <td><center><a href="{% url 'studentdet' %}">{{arti.first_name}} {{arti.last_name}}</a></center></td>
+              <td><center>{{arti.department}}</center></td>
+              <td><center>{{arti.email}}</center></td>
+            </tr>
+            {% endfor %}
+          </table>
+          </center>
+          </h4>
+        </div>
+          
+        <p><center><h2>Please Logout <a href="{% url 'faculty' %}" class="update-btn" type="submit">Here</a></h2></center></p>
+
+      </div>
+      
+    {% else%}
+      
+      <br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <p><center><h1>You are not logged in</h1></center></p>
+      <p><center><h2>Please Login <a href="{% url 'faculty' %}">Here</a></h2></center></p>
+
+    {% endif %}
+    
+  </body>
+ 
+</html>
+
+
+
+
+

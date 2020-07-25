@@ -1,0 +1,43 @@
+body {
+  background-color: #e3e6ee;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {
+  background-color: #ffba00;
+  font-size: 35px; /*weight style size type*/
+  font-weight: bold;
+  color: #444851;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+}
+
+h2 {
+  color: #444851;
+  margin: 2rem auto;
+  padding: 0.6rem;
+  text-align: center;
+  width: 60%;
+}
+
+.studentinfo label {
+  width: 90px;
+  float: left;
+}
+
+.update-btn {
+  background-color: #ffba00;
+  color: #444851;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 10px 0 0;
+  padding: 0.4rem;
+  right: 2px;
+  border-radius: 5px;
+  width: 7%;
+  text-decoration: none;
+}
+
+

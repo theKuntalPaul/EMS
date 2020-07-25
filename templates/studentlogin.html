@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Student Login Page</a></h1>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <fieldset class="studentinfo">
+        <legend>Personal info:</legend>
+        <div>{{ form.as_p }}</div>
+      </fieldset>
+      </br>
+      <div class="but">
+        <input class="update-btn" type="submit" value="Login" />
+        <input class="update-btn" type="reset" value="Reset" />
+      </div></br>
+      <div class="link">
+        <p><h4>Go back to <a href="{% url 'homepage' %}" class="update-btn" type="submit">Homepage</a></h4></p>
+      </div>
+    </form>
+{% endblock content %}
+
+
+
+
