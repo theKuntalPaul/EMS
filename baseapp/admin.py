@@ -7,4 +7,5 @@ admin.site.register(Semester)
 admin.site.register(StudentUpdateMarksModel)
 
 
-
+# to change the header name in admin panel
+admin.site.site_header = "EXAMINATION MANAGEMENT SYSTEM"
